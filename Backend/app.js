@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const db = require('./config/dbConfig.js');
 const app = express();
-const port = 8000;
+const port = process.env.port;
 
 async function start() {
   try {
@@ -17,3 +18,5 @@ async function start() {
 }
 
 start();
+
+module.exports = app;
