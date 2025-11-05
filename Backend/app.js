@@ -1,8 +1,10 @@
 require('dotenv').config();
 const express = require('express');
 const db = require('./config/dbConfig.js');
-const app = express();
 const port = process.env.port;
+const app = express();
+const router = require('./routes');
+app.use(router);
 
 async function start() {
   try {
