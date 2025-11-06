@@ -3,7 +3,7 @@ const fs = require('fs');
 console.log(fs);
 
 async function install(){
-    const queryfile = __dirname+'sql/initial-queries.sql';
+    const queryfile = __dirname+'./sql/initial-queries.sql';
     let queries = [];
     let finalMessage = {};
     let templine = '';
